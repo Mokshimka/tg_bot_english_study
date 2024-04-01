@@ -1,140 +1,134 @@
 [
-  {
-    "title": "Подводный мир",
-    "description": "Разнообразие жизни в океанах, их обитатели и особенности морской флоры и фауны.",
-    "words": [
-      {
-        "word": "Coral",
-        "translation": "Коралл",
-        "usage_example": "The Great Barrier Reef is known for its vast coral formations.",
-        "usage_example_translation": "Большой Барьерный риф известен своими обширными коралловыми образованиями."
-      },
-      {
-        "word": "Shark",
-        "translation": "Акула",
-        "usage_example": "Sharks have a reputation for being fierce predators.",
-        "usage_example_translation": "Акулы имеют репутацию свирепых хищников."
-      },
-      {
-        "word": "Dolphin",
-        "translation": "Дельфин",
-        "usage_example": "Dolphins are highly intelligent marine mammals.",
-        "usage_example_translation": "Дельфины - очень умные морские млекопитающие."
-      },
-      {
-        "word": "Tide",
-        "translation": "Прилив",
-        "usage_example": "The tide is high, let's go for a swim.",
-        "usage_example_translation": "Прилив высокий, пошли купаться."
-      },
-      {
-        "word": "Algae",
-        "translation": "Водоросли",
-        "usage_example": "Algae play a crucial role in oceanic ecosystems.",
-        "usage_example_translation": "Водоросли играют важную роль в океанических экосистемах."
-      },
-      {
-        "word": "Octopus",
-        "translation": "Осьминог",
-        "usage_example": "An octopus can escape predators by releasing ink.",
-        "usage_example_translation": "Осьминог может убежать от хищников, выпустив чернила."
-      },
-      {
-        "word": "Submarine",
-        "translation": "Подводная лодка",
-        "usage_example": "The submarine dived deep to explore the ocean floor.",
-        "usage_example_translation": "Подводная лодка погрузилась на большую глубину, чтобы исследовать дно океана."
-      },
-      {
-        "word": "Anchor",
-        "translation": "Якорь",
-        "usage_example": "The ship dropped its anchor near the shore.",
-        "usage_example_translation": "Корабль опустил якорь у берега."
-      },
-      {
-        "word": "Seaweed",
-        "translation": "Морская трава",
-        "usage_example": "Seaweed is often used in Asian cuisine.",
-        "usage_example_translation": "Морская трава часто используется в азиатской кухне."
-      },
-      {
-        "word": "Abyss",
-        "translation": "Бездна",
-        "usage_example": "The deep sea abyss is home to many strange creatures.",
-        "usage_example_translation": "В глубоководной бездне обитает множество странных существ."
-      }
-    ]
-  },
-  {
-    "title": "Космические путешествия",
-    "description": "Исследование космоса, космические корабли, астронавты и технологии, позволяющие путешествовать за пределы Земли.",
-    "words": [
-      {
-        "word": "Spaceship",
-        "translation": "Космический корабль",
-        "usage_example": "The spaceship is ready to launch into orbit.",
-        "usage_example_translation": "Космический корабль готов к запуску на орбиту."
-      },
-      {
-        "word": "Astronaut",
-        "translation": "Астронавт",
-        "usage_example": "The astronaut is training for the next space mission.",
-               "usage_example_translation": "Астронавт тренируется для следующей космической миссии."
-      },
-      {
-        "word": "Galaxy",
-        "translation": "Галактика",
-        "usage_example": "Our solar system is located in the Milky Way galaxy.",
-        "usage_example_translation": "Наша солнечная система находится в галактике Млечный Путь."
-      },
-      {
-        "word": "Rocket",
-        "translation": "Ракета",
-        "usage_example": "The rocket blasted off carrying satellites into space.",
-        "usage_example_translation": "Ракета стартовала, вынося спутники в космос."
-      },
-      {
-        "word": "Black Hole",
-        "translation": "Черная дыра",
-        "usage_example": "A black hole has a gravitational pull that not even light can escape.",
-        "usage_example_translation": "Черная дыра имеет гравитационное притяжение, от которого не может уйти даже свет."
-      },
-      {
-        "word": "Orbit",
-        "translation": "Орбита",
-        "usage_example": "The satellite entered a stable orbit around the Earth.",
-        "usage_example_translation": "Спутник вышел на стабильную орбиту вокруг Земли."
-      },
-      {
-        "word": "Meteor",
-        "translation": "Метеор",
-        "usage_example": "A meteor shower is a celestial event where numerous meteors are observed to radiate.",
-        "usage_example_translation": "Метеорный дождь - это небесное явление, при котором наблюдается излучение множества метеоров."
-      },
-      {
-        "word": "Telescope",
-        "translation": "Телескоп",
-        "usage_example": "Astronomers use telescopes to observe distant galaxies.",
-        "usage_example_translation": "Астрономы используют телескопы для наблюдения за далекими галактиками."
-      },
-      {
-        "word": "Gravity",
-        "translation": "Гравитация",
-        "usage_example": "Gravity is what keeps us grounded on Earth.",
-        "usage_example_translation": "Гравитация - это то, что удерживает нас на Земле."
-      },
-      {
-        "word": "Space Suit",
-        "translation": "Скафандр",
-        "usage_example": "The astronaut put on her space suit before the spacewalk.",
-        "usage_example_translation": "Астронавт надел скафандр перед выходом в открытый космос."
-      },
-      {
-        "word": "Nebula",
-        "translation": "Туманность",
-        "usage_example": "The Orion Nebula is one of the brightest nebulae visible to the naked eye in the night sky.",
-        "usage_example_translation": "Туманность Ориона - одна из самых ярких туманностей, видимых невооруженным глазом в ночном небе."
-      }
-    ]
-  }
+    {
+        "title": "Природа",
+        "description": "Слова, связанные с природой и окружающей средой",
+        "words": [
+            {
+                "word": "forest",
+                "translation": "лес",
+                "usage_example": "I love going for a walk in the forest.",
+                "usage_example_translation": "Я люблю гулять в лесу."
+            },
+            {
+                "word": "mountain",
+                "translation": "гора",
+                "usage_example": "She climbed to the top of the mountain.",
+                "usage_example_translation": "Она поднялась на вершину горы."
+            },
+            {
+                "word": "river",
+                "translation": "река",
+                "usage_example": "The river flows into the sea.",
+                "usage_example_translation": "Река впадает в море."
+            },
+            {
+                "word": "ocean",
+                "translation": "океан",
+                "usage_example": "They went swimming in the ocean.",
+                "usage_example_translation": "Они пошли плавать в океан."
+            },
+            {
+                "word": "tree",
+                "translation": "дерево",
+                "usage_example": "The tree provides shade in the park.",
+                "usage_example_translation": "Дерево создает тень в парке."
+            },
+            {
+                "word": "sunrise",
+                "translation": "восход солнца",
+                "usage_example": "Watching the sunrise is a beautiful experience.",
+                "usage_example_translation": "Наблюдать восход солнца - это красивый опыт."
+            },
+            {
+                "word": "rainbow",
+                "translation": "радуга",
+                "usage_example": "After the rain, we saw a beautiful rainbow.",
+                "usage_example_translation": "После дождя мы увидели красивую радугу."
+            },
+            {
+                "word": "lake",
+                "translation": "озеро",
+                "usage_example": "They went fishing at the lake.",
+                "usage_example_translation": "Они пошли на рыбалку на озеро."
+            },
+            {
+                "word": "flower",
+                "translation": "цветок",
+                "usage_example": "She received a bouquet of flowers for her birthday.",
+                "usage_example_translation": "Она получила букет цветов на день рождения."
+            },
+            {
+                "word": "butterfly",
+                "translation": "бабочка",
+                "usage_example": "The butterfly landed on the flower.",
+                "usage_example_translation": "Бабочка села на цветок."
+            }
+        ]
+    },
+    {
+        "title": "Одежда",
+        "description": "Слова, связанные с одеждой и модой",
+        "words": [
+            {
+                "word": "dress",
+                "translation": "платье",
+                "usage_example": "She is wearing a beautiful dress.",
+                "usage_example_translation": "Она носит красивое платье."
+            },
+            {
+                "word": "shirt",
+                "translation": "рубашка",
+                "usage_example": "He ironed his shirt before going out.",
+                "usage_example_translation": "Он погладил свою рубашку перед выходом."
+            },
+            {
+                "word": "shoes",
+                "translation": "туфли",
+                "usage_example": "I need to buy a new pair of shoes.",
+                "usage_example_translation": "Мне нужно купить новую пару туфлей."
+            },
+            {
+                "word": "pants",
+                "translation": "брюки",
+                "usage_example": "He wears comfortable pants for work.",
+                "usage_example_translation": "Он носит удобные брюки на работу."
+            },
+            {
+                "word": "hat",
+                "translation": "шляпа",
+                "usage_example": "She bought a new hat for the beach.",
+                "usage_example_translation": "Она купила новую шляпу для пляжа."
+            },
+            {
+                "word": "coat",
+                "translation": "пальто",
+                "usage_example": "He wore a warm coat in the winter.",
+                "usage_example_translation": "Он носил теплое пальто зимой."
+            },
+            {
+                "word": "tie",
+                "translation": "галстук",
+                "usage_example": "He wore a tie to the formal event.",
+                "usage_example_translation": "Он надел галстук на торжественное мероприятие."
+            },
+            {
+                "word": "scarf",
+                "translation": "шарф",
+                "usage_example": "She wrapped a scarf around her neck to keep warm.",
+                "usage_example_translation": "Она обмотала шарф вокруг шеи, чтобы согреться."
+            },
+            {
+                "word": "gloves",
+                "translation": "перчатки",
+                "usage_example": "He put on his gloves before going outside in the cold.",
+                "usage_example_translation": "Он надел перчатки перед выходом на улицу в холод."
+            },
+            {
+                "word": "sweater",
+                "translation": "свитер",
+                "usage_example": "She knitted a cozy sweater for the winter.",
+                "usage_example_translation": "Она связала уютный свитер на зиму."
+            }
+        ]
+    }
 ]

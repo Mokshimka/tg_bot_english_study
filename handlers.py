@@ -32,7 +32,7 @@ async def reminder():
     for user in users:
         user_id = user[0]
         chat_id = user[0]
-        text = "🔔 Пора пройти тест!"
+        text = "Пора пройти тест!"
         reply_markup = reminder_inline_keyboard_markup
         bot.sendMessage(chat_id, text, reply_markup)
 
@@ -48,7 +48,7 @@ def start():
     if not db.get_user_by_id(user_id):
         db.add_user(user_id)
 
-    text = "Привет! 👋 Я чат-бот для изучения английских слов."
+    text = "Здравствуйте, вас приветствует бот для изучения английский слов!"
     reply_markup = start_reply_keyboard_markup
     bot.sendMessage(chat_id, text, reply_markup)
 
@@ -68,19 +68,19 @@ def startTest():
         chat_id = request.json['message']['chat']['id']
         user_id = request.json['message']['from']['id']
 
-    text = "🔄 Подбор вопросов для теста..."
+    text = "Подбираем вопросы для теста"
     bot.sendMessage(chat_id, text)
 
     questions_number = genQuestions(user_id)
 
     if questions_number == 0:
-        text = ("❌ Не удалось подобрать вопросы.\n"
+        text = ("Ошибка подбора вопросов.\n"
                 "Попробуйте выбрать другую тему или подождать.")
         bot.sendMessage(chat_id, text)
 
         return
 
-    text = (f"<b>Всего вопросов в тесте:</b> {questions_number}\n\n"
+    text = (f"<b>В тесте вопросов:</b> {questions_number}\n\n"
             f"Удачи!")
     reply_markup = startTest_reply_keyboard_markup
     bot.sendMessage(chat_id, text, reply_markup, parse_mode='HTML')
@@ -167,7 +167,7 @@ def testing():
 
     if user_answer_word_translation == word_translation:
         text = (f"Ваш ответ: <b>{user_answer_word_translation}</b>\n"
-                f"✅ Правильно")
+                f"Ответ правильный")
         bot.sendMessage(chat_id, text, parse_mode='HTML')
 
         word_correct_answers_number = db.get_correct_answers_number_from_learning(user_id, word_id)
@@ -179,7 +179,7 @@ def testing():
         db.set_is_right_in_test(user_id, word_id, True)
     else:
         text = (f"Ваш ответ: <b>{user_answer_word_translation}</b>\n"
-                f"❌ Неправильно\n\n"
+                f"Неправильный ответ\n\n"
                 f"Правильный ответ:\n"
                 f"<tg-spoiler><b>{word_translation}</b></tg-spoiler>")
         bot.sendMessage(chat_id=chat_id, text=text, parse_mode='HTML')
@@ -221,7 +221,7 @@ def finishTest():
         chat_id = request.json['message']['chat']['id']
         user_id = request.json['message']['from']['id']
 
-    text = "Тест завершен 🎉"
+    text = "Тест завершен"
     reply_markup = start_reply_keyboard_markup
     bot.sendMessage(chat_id, text, reply_markup)
 
@@ -236,8 +236,8 @@ def finishTest():
 def testStatistic(chat_id, user_id):
     grouped_words = dict(db.get_is_right_grouped_words(user_id))
 
-    text = (f"<b>Правильные ответы</b> - {grouped_words.get(True, 0)}\n"
-            f"<b>Неправильные ответы</b> - {grouped_words.get(False, 0)}\n"
+    text = (f"<b>Количество правильных ответов</b> - {grouped_words.get(True, 0)}\n"
+            f"<b>Количество неправильных ответов</b> - {grouped_words.get(False, 0)}\n"
             f"<b>Без ответа</b> - {grouped_words.get(None, 0)}\n\n"
             f"<b>Всего вопросов</b> - {sum(grouped_words.values())}")
     bot.sendMessage(chat_id, text, parse_mode='HTML')
@@ -264,8 +264,8 @@ def statictics():
     word_number_in_topic = db.get_word_number_in_topic(user_id)
     user_last_repeat = db.get_user_last_repeat(user_id)
 
-    text = (f"<b>Статистика пользователя</b>\n\n"
-            f"<b>Выучено слов:</b> {learned_word_number or 0}\n"
+    text = (f"<b>Статистика ученика</b>\n\n"
+            f"<b>Всего выучено слов:</b> {learned_word_number or 0}\n"
             f"<b>Количество слов в выбранной теме:</b> {word_number_in_topic or 0}\n"
             f"<b>Последнее прохождение теста:</b>\n{user_last_repeat and user_last_repeat.strftime('%H:%M   %d.%m.%Y') or '-'}")
     bot.sendMessage(chat_id=chat_id, text=text, parse_mode="HTML")
@@ -275,7 +275,7 @@ def paramsSetting():
     chat_id = request.json['message']['chat']['id']
 
     reply_markup = menu_reply_keyboard_markup
-    text = "Настройка параметров теста. Настройка производится через меню ↙"
+    text = "Настройка параметров теста. Настройка производится через меню"
     bot.sendMessage(chat_id, text, reply_markup)
 
 
@@ -283,7 +283,7 @@ def backToMain():
     chat_id = request.json['message']['chat']['id']
     user_id = request.json['message']['from']['id']
 
-    text = "🏠 Главная. Что вы хотите сделать?"
+    text = "Главная. Что вы хотите сделать?"
     reply_markup = start_reply_keyboard_markup
     bot.sendMessage(chat_id, text, reply_markup)
 
@@ -297,14 +297,14 @@ def setTopic():
 
     title, description = db.get_user_topic(user_id)
 
-    text = (f"Выбор темы для изучения.\n\n"
+    text = (f"Выбрать тему.\n\n"
             f"<b>Текущая тема:</b> {title}\n"
             f"<b>Описание:</b> {description}")
     reply_markup = setTopic_reply_keyboard
     bot.sendMessage(chat_id, text, reply_markup, parse_mode='HTML')
 
     topics = db.get_topics()
-    text = f"Выберите тему из предложенных:"
+    text = f"Выберите тему:"
     inline_keyboard = [{"text": f"{title}", "callback_data": f"{topic_id}"} for topic_id, title in topics]
     reply_markup = {
         "inline_keyboard": [inline_keyboard[i:i+2] for i in range(0, len(topics), 2)]
@@ -426,17 +426,17 @@ def deferReminder():
 
 command_handlers = {
     '/start': {'handler': start},
-    '✍ Начать тест': {'handler': startTest, 'state': States.DEFAULT},
-    '📊 Статистика': {'handler': statictics, 'state': States.DEFAULT},
-    '🛠 Настройка параметров': {'handler': paramsSetting, 'state': States.DEFAULT},
-    '🏁 Досрочно завершить тест': {'handler': finishTest, 'state': States.TEST_STATE},
-    '📘 Пример использования': {'handler': usageExample, 'state': States.TEST_STATE},
+    'Начать тест': {'handler': startTest, 'state': States.DEFAULT},
+    'Статистика': {'handler': statictics, 'state': States.DEFAULT},
+    'Параметры': {'handler': paramsSetting, 'state': States.DEFAULT},
+    'Завершить тест раньше': {'handler': finishTest, 'state': States.TEST_STATE},
+    'Пример использования': {'handler': usageExample, 'state': States.TEST_STATE},
     'Выбрать тему': {'handler': setTopic, 'state': States.DEFAULT},
-    '❌ Отменить настройку темы': {'handler': backToMain, 'state': States.GET_TOPIC},
+    'Отменить настройку темы': {'handler': backToMain, 'state': States.GET_TOPIC},
     'Количество вопросов': {'handler': setQuestionsNumber, 'state': States.DEFAULT},
-    '❌ Отменить настройку количества вопросов': {'handler': backToMain, 'state': States.GET_QUESTIONS_NUMBER},
+    'Отменить настройку количества вопросов': {'handler': backToMain, 'state': States.GET_QUESTIONS_NUMBER},
     'Количество правильных ответов': {'handler': setCorrectAnswersNumber, 'state': States.DEFAULT},
-    '❌ Отменить настройку количества правильных ответов': {'handler': backToMain, 'state': States.GET_CORRECT_ANSWERS_NUMBER},
+    'Отменить настройку количества правильных ответов': {'handler': backToMain, 'state': States.GET_CORRECT_ANSWERS_NUMBER},
 }
 
 callback_handlers = {
